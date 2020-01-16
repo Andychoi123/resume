@@ -1,0 +1,415 @@
+body {
+	font-family: Times;
+}
+
+@media screen and (max-width: 768px) {
+.container {
+	flex-flow: column;
+}
+
+.container .header {
+    width: 100vw;
+    height: 100vh;
+}
+
+.container .content {
+	width: 100vw;
+}
+
+
+ }
+
+ @media screen and (min-width: 768px) {
+.container {
+	flex-flow: row;
+	width: 100vw;
+}
+
+}
+
+
+.container {
+	display: flex;
+	max-width: 1240px;
+	margin: auto auto;
+}
+
+.container .content{
+	flex: 0.55;
+	position: relative;
+	background: rgb(250,250,250);
+	overflow: hidden;
+}
+
+.container .header {
+	flex: 0.45;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: url(http://coding.imweb.io/img/project/resume/bg.png);
+	background-color: #1B8AF2;
+	color: white;
+}
+
+.img-bd .img-item {
+	position: absolute;
+	left: 50%;
+	margin-left: -50px;
+	width: 99px;
+	height: 99px;
+	border: 1px solid #1BA0F2;
+	border-radius: 50%;
+}
+
+.header .img-bd {
+	margin: 0px auto 20px;
+	width: 100px;
+	height: 100px;
+	background-color: white;
+	border-radius: 50%;
+    box-shadow: 0 0 1px 7px #3FADFF;
+}
+
+.header .img-bd:hover  {
+    cursor: pointer;
+	animation: shadow 1s 0.5s infinite;
+}
+
+@keyframes shadow {
+	0% {
+		 box-shadow: 0 0 1px 7px rgba(0,0,0,0);
+	}
+
+	100% {
+		box-shadow: 0 0 7px 10px #3FADFF;
+
+	}
+}
+
+.header .name {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin:0px auto 10px;
+}
+
+.name .name-tt {
+	font-size: 1.5em;
+}
+
+.name .name-bd {
+	font-size: 14px;
+}
+.name span {
+	display: block;
+	margin: 5px auto;
+}
+
+.information {
+	margin-bottom: 15px;
+}
+.information ul {
+	list-style-type: none;
+	position: relative;
+}
+
+.information .item-list .item{
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 15px;
+
+}
+
+.item .item-mail::before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	left: 5px;
+	width: 22px;
+	height: 22px;
+	border: 1.2px solid white;
+	border-radius: 50%;
+	background: url("image/css-sprites.png") no-repeat;
+	background-size: 47px;
+	background-position: -25px -1.5px;
+}
+
+.item .item-tel::before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	top: 36px;
+	left: 5px;
+	width: 22px;
+	height: 22px;
+	border: 1.2px solid white;
+	border-radius: 50%;
+	background: url("image/css-sprites.png") no-repeat;
+	background-size: 47px;
+	background-position: 0px -1.5px;
+}
+
+.item .item-web::before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	top: 72px;
+	left: 5px;
+	width: 22px;
+	height: 22px;
+	border: 1.2px solid white;
+	border-radius: 50%;
+	background: url("image/css-sprites.png") no-repeat;
+	background-size: 47px;
+	background-position: -1px -24px;
+}
+
+.header .personal {
+	width: 350px;
+	height: 65px;
+	position: relative;
+	border: 1px solid white;
+	border-radius: 10px;
+	font-size: 13px;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-around;
+}
+
+.personal .personal-one{
+	margin-top: 5px;
+}
+
+.personal .personal-two{
+	margin-bottom: 5px;
+}
+
+.personal .personal-one, .personal .personal-two {
+	display: flex;
+	flex-flow: row;
+	position: relative;
+	left:8px;
+}
+
+.personal-one .personal-align,
+.personal-two .personal-align {
+	flex-grow: 1;
+	display: inline-block;
+}
+
+.experience-list .heading {
+	margin-top: 70px;
+	position: relative;
+    margin-bottom: 50px;
+}
+
+.heading .line {
+	width: 100%;
+	height: 1px;
+	background-color: rgb(190,190,190);
+	margin-left: 15px;
+}
+
+.heading .heading-tt {
+	font-weight: normal;
+	font-size: 17px;
+	color: #1B8AF2;
+	padding:0px 8px;
+	background-color: rgb(250,250,250);
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -23px);
+	z-index: 12;
+
+}
+
+.experience-time .experience-tt::before {
+	content: "";
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background-color: #1B8AF2;
+	border-radius: 50%;
+	margin: 0px 9px 1.25px -26px;
+	box-shadow: 0px 0px 1px 3.5px rgba(90,160,255,0.3);
+}
+
+.experience-time .experience-tt:hover::before {
+	cursor: pointer;
+	animation: time-shadow 1s 0.5s infinite;
+}
+
+@keyframes time-shadow {
+	0% {
+	box-shadow: 0px 0px 1px 3.5px rgba(90,160,255,0);
+	}
+
+	100% {
+		box-shadow: 0px 0px 1px 3.5px rgba(90,160,255,0.4);
+	}
+}
+
+.experience-time .experience-tt {
+	position: relative;
+	top: -7px;
+}
+
+.heading-bd .heading-bd {
+	margin-top: -20px;
+	 margin-bottom: -5px;
+}
+
+
+.content-bd p {
+	font-size: 13px;
+    color: rgb(130,130,130);
+    margin-bottom: 0;
+}
+
+.content-bd .content-bd-spacing {
+	margin-bottom: 30px;
+}
+
+.skill .heading {
+	margin-top: 70px;
+	position: relative;
+    margin-bottom: 20px;
+}
+
+.container .skill {
+	display: flex;
+	flex-flow: column;
+}
+
+.ps p, .html-css p, .javascript p {
+	display: inline-block;
+}
+
+.ps .right, .html-css .right, .javascript .right {
+	float: right;
+	border: 1px solid rgb(130,130,130);
+	border-radius: 14.2px;
+	color: rgb(130,130,130);
+	font-size: 11px;
+	margin: 20px 20px 20px auto;
+    padding: 1px 5px;
+}
+
+.skill-ps .skill-bd,
+.skill-html-css .skill-bd,
+.skill-javascript .skill-bd {
+	margin-top: -15px;
+	color: rgb(130,130,130);
+	font-size: 14px;
+}
+
+.skill-ps .align,
+.skill-html-css .align,
+.skill-javascript .align {
+	margin-left: 40px;
+}
+
+.level-ps .level::before {
+	content: "";
+	display: block;
+	width: 25%;
+	height: 4px;
+	border-radius: 2px 0px 0px 2px;
+	background:linear-gradient(to right, rgb(27,94,255) 5px, rgb(27,200,255) 100px);
+}
+
+.level-html-css .level::before {
+	content: "";
+	display: block;
+	width: 90%;
+	height: 4px;
+	border-radius: 2px 0px 0px 2px;
+	background:linear-gradient(to right, rgb(27,94,255) 5px, rgb(27,200,255) 100px);
+}
+
+.level-javascript .level::before {
+	content: "";
+	display: block;
+	width: 70%;
+	height: 4px;
+	border-radius: 2px 0px 0px 2px;
+	background:linear-gradient(to right, rgb(27,94,255) 5px, rgb(27,200,255) 100px);
+}
+
+.align .level{
+	width: 98%;
+	height: 4px;
+	background-color: rgb(210,210,210);
+	border-radius: 2px
+}
+
+.skill-ps:hover .level-ps .level::before,
+.skill-html-css:hover .level-html-css .level::before,
+.skill-javascript:hover .level-javascript .level::before {
+	cursor: pointer;
+	animation: level 1s 0.2s;
+}
+
+.skill-ps:hover,
+.skill-html-css:hover,
+.skill-javascript:hover {
+	cursor: pointer;
+}
+
+@keyframes level {
+	0% {
+		transform: scaleX(0.1);
+		transform-origin: 0px;
+	}
+	100% {
+		transform: scaleX(1);
+	 	transform-origin: 0px;
+	}
+}
+
+.skill-javascript .level-javascript {
+	margin-bottom: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.skill .heading .line {
+	width: 100%;
+	height: 1px;
+	background-color: rgb(190,190,190);
+	margin-left: 15px;
+}
+
+.skill .heading .heading-tt {
+	font-weight: normal;
+	font-size: 17px;
+	color: #1B8AF2;
+	padding:0px 8px;
+	background-color: rgb(250,250,250);
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -23px);
+	z-index: 13;
+
+}
+*/
